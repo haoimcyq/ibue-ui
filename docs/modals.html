@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>布局 | Layout</title>
+    <link rel="stylesheet" href="./js/prism/prism.css">
+    <link rel="stylesheet" href="./../lib/ibue.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <aside id="sidebar" class="col-sm-8 col-md-6 col-lg-6 col-xl-4">
+                <div id="nav"></div>
+            </aside>
+            <main class="col-sm-16 col-md-18 col-lg-18 col-xl-20">
+                <header class="module-header bg-secondary">
+                    <h1>对话框 <small>MODAL</small></h1>
+                    <p class="typo-h5">栅格系统英文为“grid systems”，也有人翻译为“网格系统”，运用固定的格子设计版面布局，其风格工整简洁，在二战后大受欢迎，已成为今日出版物设计的主流风格之一。</p>
+                    <p class="typo-h5">借助完善的栅格系统可以对网页进行响应式布局，最大限度的适配不同分辨率的设备，提高屏幕利用率，最大化操作效率。</p>
+                </header>
+                <section class="main-content">
+                    <h3></h3>
+                    <div class="modal">
+                        <div class="modal-inner">
+                            <div class="modal-content" style="width: 400px;">
+                                <div class="modal-header">
+                                    <span class="typo-h5">modal heading</span>
+                                    <button class="close">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-justify mb-0">Man's dearest possession is life. It is given to him but once, and he must live it so as to feel no torturing regrets for wasted years, never know the burning shame of a mean and petty past; so live that, dying, he might say: all my life, all my strength were given to the finest cause in all the world──the fight for the Liberation of Mankind!</p>
+                                </div>
+                                <div class="modal-footer text-right">
+                                    <button class="button is-secondary is-plain">CANCEL</button>
+                                    <button class="button is-primary">OK</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/prism/prism.js"></script>
+</body>
+</html>

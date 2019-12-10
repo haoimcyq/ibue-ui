@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+.alert {
+    padding: $base-unit * 2 $base-unit * 3;
+    @include border-radius(4px);
+    margin-bottom: $base-unit * 3;
+}
+
+.alert.is-bordered {
+    border-left: 3px solid transparent;
+}
+
+@each $color, $value in $theme-colors {
+    .alert.is-#{$color} {
+        @if ($color == light) {
+            color: $dark;
+        }
+        @else {
+            color: darken($color: $value, $amount: 14%);
+        }
+        background-color: mix(#ffffff, $value, 82%);
+
+        hr {
+            border-top-color: mix(#ffffff, $value, 60%);
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .alert.is-inverse.is-#{$color} {
+        @if ($color == light) {
+            color: $dark;
+        }
+        @else {
+            color: #ffffff;
+        }
+        background-color: $value;
+
+        hr {
+            border-top-color: rgba(#ffffff, .12);
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .alert.is-bordered.is-#{$color} {
+        border-left-color: $value;
+    }
+}

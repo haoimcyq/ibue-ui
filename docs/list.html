@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>布局 | Layout</title>
+    <link rel="stylesheet" href="./js/prism/prism.css">
+    <link rel="stylesheet" href="./../lib/ibue.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <aside id="sidebar" class="col-sm-8 col-md-6 col-lg-6 col-xl-4">
+                <div id="nav"></div>
+            </aside>
+            <main class="col-sm-16 col-md-18 col-lg-18 col-xl-20">
+                <header class="module-header bg-secondary">
+                    <h1>列表 <small>LIST</small></h1>
+                </header>
+                <section class="main-content">
+                    <h3>普通列表</h3>
+                    <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;ul class="list">
+    &lt;li class="item">&lt;/li>
+    ...
+&lt;/ul>
+</code></pre>
+                    <div class="example">
+                        <h5>演示效果：</h5>
+                        <ul class="list">
+                            <li class="item">Always deliver more than expected.</li>
+                            <li class="item">Life grows relative to one’s investment in it.</li>
+                            <li class="item">Marketing is a contest for people’s attention.</li>
+                            <li class="item">Men are not against you; they are merely for themselves.</li>
+                            <li class="item">Science is organized knowledge. Wisdom is organized life.</li>
+                            <li class="item">Adversity does not build character, it reveals it.</li>
+                        </ul>
+                    </div>
+                    <h3>边框列表</h3>
+                    <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;ul class="list is-bordered">
+    &lt;li class="item">&lt;/li>
+    ...
+&lt;/ul>
+</code></pre>
+                    <div class="example">
+                        <h5>演示效果：</h5>
+                        <ul class="list is-bordered">
+                            <li class="item">Always deliver more than expected.</li>
+                            <li class="item">Life grows relative to one’s investment in it.</li>
+                            <li class="item">Marketing is a contest for people’s attention.</li>
+                            <li class="item">Men are not against you; they are merely for themselves.</li>
+                            <li class="item">Science is organized knowledge. Wisdom is organized life.</li>
+                            <li class="item">Adversity does not build character, it reveals it.</li>
+                        </ul>
+                    </div>
+                    <h3>鼠标悬停</h3>
+                    <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;ul class="list is-hovered">
+    &lt;li class="item">&lt;/li>
+    ...
+&lt;/ul>
+</code></pre>
+                    <div class="example">
+                        <h5>演示效果：</h5>
+                        <ul class="list is-hovered">
+                            <li class="item">Always deliver more than expected.</li>
+                            <li class="item">Life grows relative to one’s investment in it.</li>
+                            <li class="item">Marketing is a contest for people’s attention.</li>
+                            <li class="item">Men are not against you; they are merely for themselves.</li>
+                            <li class="item">Science is organized knowledge. Wisdom is organized life.</li>
+                            <li class="item">Adversity does not build character, it reveals it.</li>
+                        </ul>
+                    </div>
+                    <h3>Flush效果</h3>
+                    <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;ul class="list is-flush">
+    &lt;li class="item">&lt;/li>
+    ...
+&lt;/ul>
+</code></pre>
+                    <div class="example">
+                        <h5>演示效果：</h5>
+                        <ul class="list is-flush">
+                            <li class="item">Always deliver more than expected.</li>
+                            <li class="item">Life grows relative to one’s investment in it.</li>
+                            <li class="item">Marketing is a contest for people’s attention.</li>
+                            <li class="item">Men are not against you; they are merely for themselves.</li>
+                            <li class="item">Science is organized knowledge. Wisdom is organized life.</li>
+                            <li class="item">Adversity does not build character, it reveals it.</li>
+                        </ul>
+                    </div>
+                    <h3>水平布局</h3>
+                    <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;ul class="list is-horizontal is-flush">
+    &lt;li class="item">&lt;/li>
+    ...
+&lt;/ul>
+</code></pre>
+                    <div class="example">
+                        <h5>演示效果：</h5>
+                        <ul class="list is-horizontal is-flush">
+                            <li class="item">Always deliver more than expected.</li>
+                            <li class="item">Life grows relative to one’s investment in it.</li>
+                            <li class="item">Marketing is a contest for people’s attention.</li>
+                            <li class="item">Men are not against you; they are merely for themselves.</li>
+                            <li class="item">Science is organized knowledge. Wisdom is organized life.</li>
+                            <li class="item">Adversity does not build character, it reveals it.</li>
+                        </ul>
+                    </div>
+                    <h3>状态类</h3>
+                    <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;ul class="list">
+    &lt;li class="item is-primary">&lt;/li>
+    ...
+&lt;/ul>
+</code></pre>
+                    <div class="example">
+                        <h5>演示效果：</h5>
+                        <ul class="list">
+                            <li class="item is-primary">Always deliver more than expected.</li>
+                            <li class="item">Life grows relative to one’s investment in it.</li>
+                            <li class="item is-error">Marketing is a contest for people’s attention.</li>
+                            <li class="item">Men are not against you; they are merely for themselves.</li>
+                            <li class="item is-success">Science is organized knowledge. Wisdom is organized life.</li>
+                            <li class="item">Adversity does not build character, it reveals it.</li>
+                        </ul>
+                    </div>
+                    <h3>Inverse状态类</h3>
+                    <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;ul class="list">
+    &lt;li class="item is-primary is-inverse">&lt;/li>
+    ...
+&lt;/ul>
+</code></pre>
+                    <div class="example">
+                        <h5>演示效果：</h5>
+                        <ul class="list">
+                            <li class="item is-primary is-inverse">Always deliver more than expected.</li>
+                            <li class="item">Life grows relative to one’s investment in it.</li>
+                            <li class="item is-error is-inverse">Marketing is a contest for people’s attention.</li>
+                            <li class="item">Men are not against you; they are merely for themselves.</li>
+                            <li class="item is-success is-inverse">Science is organized knowledge. Wisdom is organized life.</li>
+                            <li class="item">Adversity does not build character, it reveals it.</li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/prism/prism.js"></script>
+</body>
+</html>

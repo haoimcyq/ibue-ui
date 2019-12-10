@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+.radio {
+    display: inline-block;
+    position: relative;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 30px;
+    vertical-align: middle;
+    @include user-select;
+    
+    &:not(:first-child) {
+        margin-left: 16px;
+    }
+
+    input[type="radio"] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+    
+    .radio-icon {
+        display: inline-block;
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        vertical-align: middle;
+        border: 2px solid #d2d2d2;
+        @include border-radius(50%);
+    }
+
+    input[type="radio"]:checked + .radio-icon {
+        border-color: $primary;
+
+        &::before {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            background-color: $primary;
+            transform: translate(-50%, -50%);
+            @include border-radius(50%);
+            content: "";
+        }
+    }
+
+    input[type="radio"]:disabled + .radio-icon {
+        border-color: #d2d2d2 !important;
+
+        &::before {
+            background-color: #d2d2d2 !important;
+        }
+    }
+
+    input[type="radio"]:disabled:not(:checked) + .radio-icon {
+        border-color: #d2d2d2 !important;
+
+        &::before {
+            background-color: transparent !important;
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .radio.is-#{$color} {
+
+        input[type="radio"]:checked + .radio-icon {
+            border-color: $value;
+
+            &::before {
+                background-color: $value;
+            }
+        }
+    }
+}

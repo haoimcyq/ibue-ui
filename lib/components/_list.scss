@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+.list {
+    display: flex;
+    flex-direction: column;
+
+    > .item {
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        color: inherit;
+        transition: background-color .3s ease;
+        margin-bottom: -1px;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        color: inherit;
+    }
+
+    &.is-horizontal {
+        flex-direction: row;
+    }
+}
+
+.list {
+    @each $color, $value in $theme-colors {
+        > .item.is-#{$color} {
+            @if ($color == light) {
+                color: $dark;
+            }
+            @else {
+                color: darken($color: $value, $amount: 12%);
+            }
+            background-color: mix(#ffffff, $value, 84%);
+    
+            hr {
+                border-top-color: mix(#ffffff, $value, 60%);
+            }
+        }
+    }
+
+    @each $color, $value in $theme-colors {
+        > .item.is-inverse.is-#{$color} {
+            @if ($color == light) {
+                color: $dark;
+            }
+            @else {
+                color: #ffffff;
+            }
+            background-color: $value;
+    
+            hr {
+                border-top-color: rgba(#ffffff, .12);
+            }
+        }
+    }
+}
+
+.list.is-bordered {
+    > .item {
+        border: 1px solid $base-border-color;
+    }
+}
+
+.list.is-hovered {
+    > .item:hover {
+        background-color: rgba(0, 0, 0, .12);
+
+        &:active {
+            background-color: rgba(0, 0, 0, .16)
+        }
+    }
+}
+
+.list.is-flush:not(.is-horizontal) {
+    > .item:not(:last-child) {
+        border-bottom: 1px solid $base-border-color;
+    }
+}
+
+.list.is-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+
+    > .item {
+        margin-right: -1px;
+        margin-bottom: 0;
+    }
+
+    &.is-flush {
+
+        > .item:not(:last-child) {
+            border-right: 1px solid $base-border-color;
+        }
+    }
+}

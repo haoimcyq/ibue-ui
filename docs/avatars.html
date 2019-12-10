@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./js/prism/prism.css">
+    <link rel="stylesheet" href="./../lib/ibue.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <aside id="sidebar" class="col-sm-8 col-md-6 col-lg-6 col-xl-4">
+                <div id="nav"></div>
+            </aside>
+            <main class="col-sm-16 col-md-18 col-lg-18 col-xl-20">
+                <header class="module-header bg-error">
+                    <h1>头像 <small>AVATAR</small></h1>
+                </header>
+                <section class="main-content">
+                <h3>普通头像</h3>
+                <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;figure class="avatar">
+    &lt;img src="./images/avatar_1.jpg" alt="...">
+&lt;/figure>
+</code></pre>
+                <div class="example">
+                    <h5>演示效果：</h5>
+                    <figure class="avatar">
+                        <img src="./images/avatar_1.jpg" alt="...">
+                    </figure>
+                </div>
+                <h3>头像尺寸</h3>
+                <section>
+                <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;figure class="avatar is-mini">
+    &lt;img src="./images/avatar_1.jpg" alt="...">
+&lt;/figure>
+</code></pre>
+                <h5>演示效果：</h5>
+                <div class="example table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>尺寸类</th>
+                                <th>尺寸</th>
+                                <th>效果</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-error">is-mini</td>
+                                <td>24px</td>
+                                <td>
+                                    <figure class="avatar is-mini">
+                                        <img src="./images/avatar_1.jpg" alt="...">
+                                    </figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-error">is-small</td>
+                                <td>32px</td>
+                                <td>
+                                    <figure class="avatar is-small">
+                                        <img src="./images/avatar_1.jpg" alt="...">
+                                    </figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>默认</td>
+                                <td>36px</td>
+                                <td>
+                                    <figure class="avatar">
+                                        <img src="./images/avatar_1.jpg" alt="...">
+                                    </figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-error">is-medium</td>
+                                <td>40px</td>
+                                <td>
+                                    <figure class="avatar is-medium">
+                                        <img src="./images/avatar_1.jpg" alt="...">
+                                    </figure>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-error">is-large</td>
+                                <td>48px</td>
+                                <td>
+                                    <figure class="avatar is-large">
+                                        <img src="./images/avatar_1.jpg" alt="...">
+                                    </figure>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </section>
+                <section>
+                    <h3>头像组</h3>
+                    <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="avatar-group">
+    &lt;figure class="avatar">
+        &lt;img src="./images/avatar_1.jpg" alt="...">
+    &lt;/figure>
+    ...
+&lt;/div>
+</code></pre>
+                    <div class="example">
+                        <h5>演示效果：</h5>
+                        <div class="avatar-group">
+                            <figure class="avatar is-small">
+                                <img src="./images/avatar_1.jpg" alt="...">
+                            </figure>
+                            <figure class="avatar is-small">
+                                <img src="./images/avatar_2.jpg" alt="...">
+                            </figure>
+                            <figure class="avatar is-small">
+                                <img src="./images/avatar_3.jpg" alt="...">
+                            </figure>
+                            <figure class="avatar is-small">
+                                <img src="./images/avatar_4.jpg" alt="...">
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/prism/prism.js"></script>
+</body>
+</html>

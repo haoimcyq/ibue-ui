@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+.label {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 8px;
+    font-size: 12px;
+    font-weight: 400;
+    @include border-radius(2px);
+
+    .close {
+        display: inline-block;
+        line-height: inherit;
+        font-size: 16px;
+        margin-left: 12px;
+        opacity: 0.8;
+        margin-top: -1px;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .label.is-#{$color} {
+        @if ($color == light) {
+            color: $dark;
+        }
+        @else {
+            color: #ffffff;
+        }
+
+        background-color: $value;
+    }
+}
+
+.label.is-chips {
+    background-color: #eeeeee;
+    @include border-radius(20px);
+
+    .avatar {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        margin-left: -8px;
+    }
+}
+
+.label.is-plain {
+    line-height: 22px;
+    border: 1px solid transparent;
+
+    &.is-chips {
+
+        .avatar {
+            margin-top: -1px;
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .label.is-plain.is-#{$color} {
+        @if ($color == light) {
+            color: $dark;
+        }
+        @else {
+            color: darken($color: $value, $amount: 1%);
+        }
+
+        border-color: mix(#ffffff, $value, 30%);
+        background-color: mix(#ffffff, $value, 92%);
+    }
+}

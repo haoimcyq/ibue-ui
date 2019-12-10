@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+h1, h2, h3, h4, h5, h6,
+.typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-h5, .typo-h6 {
+    margin-top: 0;
+    margin-bottom: 0.6em;
+}
+
+h1, .typo-h1 {
+    font-size: 38px;
+    line-height: pxToem(46px, 30px);
+}
+
+h2, .typo-h2 {
+    font-size: 30px;
+    line-height: pxToem(38px, 30px);
+}
+
+h3, .typo-h3 {
+    font-size: 24px;
+    line-height: pxToem(32px, 24px);
+}
+
+h4, .typo-h4 {
+    font-size: 20px;
+    line-height: pxToem(28px, 20px);
+}
+
+h5, .typo-h5 {
+    font-size: 16px;
+    line-height: pxToem(24px, 16px);
+}
+
+h6, .typo-h6 {
+    font-size: 14px;
+    line-height: pxToem(22px, 14px);
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
+.typo-h1 small, .typo-h2 small, .typo-h3 small, .typo-h4 small, .typo-h5 small, .typo-h6 small {
+    line-height: 1;
+    font-size: 75%;
+    font-weight: normal;
+    color: #888888;
+}

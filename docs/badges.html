@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>徽标 | Badge</title>
+    <link rel="stylesheet" href="./js/prism/prism.css">
+    <link rel="stylesheet" href="./../lib/ibue.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <aside id="sidebar" class="col-sm-8 col-md-6 col-lg-6 col-xl-4">
+                <div id="nav"></div>
+            </aside>
+            <main class="col-sm-16 col-md-18 col-lg-18 col-xl-20">
+                <header class="module-header bg-info">
+                    <h1>徽标 <small>BADGE</small></h1>
+                </header>
+                <section class="main-content">
+                    <h3>普通徽标</h3>
+                    <div class="description">
+                        <p>直接给标签或者元素添加徽标类 <span class="text-error">.badge</span> 设置徽标样式。</p>                        
+                    </div>
+                    <h5>示例代码：</h5>
+<!-- begin -->
+<pre class="line-numbers"><code class="language-markup">&lt;span class="badge is-primary">99&lt;/span>
+...
+</code></pre>
+<!-- end -->
+                    <h5>演示效果：</h5>
+                    <div class="example table-responsive">
+                        <table class="table is-bordered is-centered">
+                            <tbody>
+                                <tr>
+                                    <td>颜色类</td>
+                                    <td class="text-error">.is-primary</td>
+                                    <td class="text-error">.is-secondary</td>
+                                    <td class="text-error">.is-success</td>
+                                    <td class="text-error">.is-error</td>
+                                    <td class="text-error">.is-warning</td>
+                                    <td class="text-error">.is-info</td>
+                                    <td class="text-error">.is-dark</td>
+                                    <td class="text-error">.is-light</td>
+                                </tr>
+                                <tr>
+                                    <td>含义</td>
+                                    <td>主要</td>
+                                    <td>次要</td>
+                                    <td>成功</td>
+                                    <td>失败</td>
+                                    <td>提醒</td>
+                                    <td>信息</td>
+                                    <td>暗色</td>
+                                    <td>亮色</td>
+                                </tr>
+                                <tr>
+                                    <td>效果</td>
+                                    <td><span class="badge is-primary" role="badge">999</span></td>
+                                    <td><span class="badge is-secondary" role="badge">555</span></td>
+                                    <td><span class="badge is-success" role="badge">666</span></td>
+                                    <td><span class="badge is-error" role="badge">99</span></td>
+                                    <td><span class="badge is-warning" role="badge">9</span></td>
+                                    <td><span class="badge is-info" role="badge">888</span></td>
+                                    <td><span class="badge is-dark" role="badge">88</span></td>
+                                    <td><span class="badge is-light" role="badge">6</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3>小圆点</h3>
+                    <div class="description">
+                        <p>给徽标类 <span class="text-error">.badge</span> 添加 <span class="text-error">.is-dot</span> 类设置徽标小圆点样式。</p>                        
+                    </div>
+                    <h5>示例代码：</h5>
+<!-- begin -->
+<pre class="line-numbers"><code class="language-markup">&lt;span class="badge is-primary is-dot">&lt;/span>
+...
+</code></pre>
+<!-- end -->
+                    <h5>演示效果：</h5>
+                    <div class="example table-responsive">
+                        <table class="table is-bordered is-centered">
+                            <tbody>
+                                <tr>
+                                    <td>颜色类</td>
+                                    <td class="text-error">.is-primary</td>
+                                    <td class="text-error">.is-secondary</td>
+                                    <td class="text-error">.is-success</td>
+                                    <td class="text-error">.is-error</td>
+                                    <td class="text-error">.is-warning</td>
+                                    <td class="text-error">.is-info</td>
+                                    <td class="text-error">.is-dark</td>
+                                    <td class="text-error">.is-light</td>
+                                </tr>
+                                <tr>
+                                    <td>含义</td>
+                                    <td>主要</td>
+                                    <td>次要</td>
+                                    <td>成功</td>
+                                    <td>失败</td>
+                                    <td>提醒</td>
+                                    <td>信息</td>
+                                    <td>暗色</td>
+                                    <td>亮色</td>
+                                </tr>
+                                <tr>
+                                    <td>效果</td>
+                                    <td><span class="badge is-primary is-dot" role="badge"></span></td>
+                                    <td><span class="badge is-secondary is-dot" role="badge"></span></td>
+                                    <td><span class="badge is-success is-dot" role="badge"></span></td>
+                                    <td><span class="badge is-error is-dot" role="badge"></span></td>
+                                    <td><span class="badge is-warning is-dot" role="badge"></span></td>
+                                    <td><span class="badge is-info is-dot" role="badge"></span></td>
+                                    <td><span class="badge is-dark is-dot" role="badge"></span></td>
+                                    <td><span class="badge is-light is-dot" role="badge"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3>通知图标或头像的右上角</h3>
+                    <div class="description">
+                        <p>徽标类 <span class="text-error">.badge</span> 添加 <span class="text-error">.is-position</span> 类设置右上角徽标样式。</p>                     
+                    </div>
+                    <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;figure class="avatar">
+    &lt;sup class="badge is-position">99&lt;/sup>
+    &lt;img src="./images/avatar_2.jpg" alt="...">
+&lt;/figure>
+...
+</code></pre>
+                    <div class="example">
+                        <h5>演示效果：</h5>
+                        <figure class="avatar">
+                            <sup class="badge is-position">99</sup>
+                            <img src="./images/avatar_2.jpg" alt="...">
+                        </figure>
+                        <figure class="avatar">
+                            <sup class="badge is-dot is-position"></sup>
+                            <img src="./images/avatar_2.jpg" alt="...">
+                        </figure>
+                        <figure class="avatar">
+                            <sup class="badge is-position">999</sup>
+                            <img src="./images/avatar_2.jpg" alt="...">
+                        </figure>
+                    </div>
+                    <section>
+                            <h3>CSS 类名列表</h3>
+                            <div class="example">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>类名</th>
+                                            <th>效果</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-error">.badge</td>
+                                            <td>定义一个徽标组件。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-error">.is-dot</td>
+                                            <td>定义一个小圆点样式。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-error">.is-primary</td>
+                                            <td>预定义组件样式。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-error">.is-secondary</td>
+                                            <td>预定义组件样式。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-error">.is-success</td>
+                                            <td>预定义组件样式。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-error">.is-error</td>
+                                            <td>预定义组件样式。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-error">.is-warning</td>
+                                            <td>预定义组件样式。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-error">.is-info</td>
+                                            <td>预定义组件样式。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-error">.is-dark</td>
+                                            <td>预定义组件样式。</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-error">.is-light</td>
+                                            <td>预定义组件样式。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/prism/prism.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+.layout {
+    display: flex;
+
+    &.is-vertical {
+        flex-direction: column;
+    }
+}
+
+.layout-header {
+    height: $base-unit * 8;
+    flex-shrink: 0;
+    background-color: mix(#ffffff, $secondary, 10%);
+}
+
+.layout-footer {
+    flex-shrink: 0;
+    height: 40px;
+    background-color: mix(#ffffff, $secondary, 50%);
+}
+
+.layout-aside {
+    width: 256px;
+    flex-shrink: 0;
+    background-color: mix(#ffffff, $secondary, 40%);
+}
+
+.layout-main {
+    display: block;
+    flex: 1;
+    flex-basis: auto;
+    height: 400px;
+    background-color: mix(#ffffff, $secondary, 80%);
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./js/prism/prism.css">
+    <link rel="stylesheet" href="./../lib/ibue.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <aside id="sidebar" class="col-sm-8 col-md-6 col-lg-6 col-xl-4">
+                <div id="nav"></div>
+            </aside>
+            <main class="col-sm-16 col-md-18 col-lg-18 col-xl-20">
+                <header class="module-header bg-success">
+                    <h1>路径导航 <small>BREADCRUMB</small></h1>
+                </header>
+                <article class="main-content">
+                <section>
+                    <h3>基本路径导航</h3>
+                    <div class="description">
+                        <p>路径导航类默认分割线为斜杆。</p>
+                    </div>
+                    <h5>示例代码：</h5>
+<!-- begin -->
+<pre class="line-numbers"><code class="language-markup">&lt;ul class="breadcrumb">
+    &lt;li>&lt;a href="#">首页&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">组件&lt;/a>&lt;/li>
+    &lt;li class="active">路径导航&lt;/li>
+&lt;/ul>
+</code></pre>
+<!-- end -->
+                    <div class="example">
+                        <h5>演示效果：</h5>
+                        <ul class="breadcrumb">
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">组件</a></li>
+                            <li class="active">路径导航</li>
+                        </ul>
+                    </div>
+                    <h3>分割线</h3>
+                    <div class="description">
+                            <p>给路径导航类 <span class="text-error">.breadcrumb</span> 添加 <span class="text-error">.is-arrow</span> 类设置分割线为箭头。</p>
+                    </div>
+                    <h5>示例代码：</h5>
+<!-- begin -->
+<pre class="line-numbers"><code class="language-markup">&lt;ul class="breadcrumb is-arrow">
+    &lt;li>&lt;a href="#">首页&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">组件&lt;/a>&lt;/li>
+    &lt;li class="active">路径导航&lt;/li>
+&lt;/ul>
+</code></pre>
+<!-- end -->
+                    <div class="example">
+                        <h5>演示效果：</h5>
+                        <ul class="breadcrumb is-arrow">
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">组件</a></li>
+                            <li class="active">路径导航</li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
+            </main>
+        </div>
+    </div>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/prism/prism.js"></script>
+</body>
+</html>

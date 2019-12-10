@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+.badge {
+    display: inline-block;
+    min-width: 20px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 6px;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+    @include border-radius(16px);
+
+    &.is-dot {
+        width: 6px;
+        min-width: 6px;
+        max-width: 20px;
+        height: 6px;
+        padding: 0;
+        border-radius: 100%;
+    }
+
+    &.is-position {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $error;
+        -webkit-transform: translate(50%, -50%);
+        transform: translate(50%, -50%);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .badge.is-#{$color},
+    .badge.is-dot.is-#{$color} {
+        @if ($color == light) {
+            color: $dark;
+        }
+        @else {
+            color: #ffffff;
+        }
+        background-color: $value;
+    }
+}

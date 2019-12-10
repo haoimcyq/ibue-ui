@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+.table {
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+
+    thead {
+        vertical-align: middle;
+
+        th, td {
+            text-align: left;
+        }
+    }
+
+    th,
+    td {
+        padding: 10px 8px;
+        border-bottom: 1px solid $base-border-color;
+    }
+}
+
+.table.is-centered {
+    
+    > thead > tr > td,
+    > thead > tr > th,
+    > tbody > tr > td,
+    > tbody > tr > th,
+    > tfoot > tr > td,
+    > tfoot > tr > th {
+        text-align: center;
+    }
+}
+
+.table.is-bordered {
+    border: 1px solid $base-border-color;
+  
+    th,
+    td {
+      border: 1px solid $base-border-color;
+    }
+}
+
+.table.is-stack,
+.table.is-striped {
+    tbody tr:nth-of-type(odd) {
+        background-color: #f6f7f8;
+    }
+}
+
+.table.is-highlight,
+.table.is-hovered {
+    tbody tr:hover {
+        background-color: #f6f7f8;
+    }
+}
+
+.table.is-condensed {
+    
+    th,
+    td {
+        padding: 5px 8px;
+    }
+}
+
+.table-responsive {
+    max-width: 100%;
+    overflow: auto;
+
+    .table > thead > tr > td,
+    .table > thead > tr > th {
+        white-space: nowrap;
+    }
+}
+
+.table tbody {
+    
+    @each $color, $value in $theme-colors {
+        tr.is-#{$color},
+        td.is-#{$color} {
+            background-color: mix(#ffffff, $value, 80%);
+        }
+    }
+}
+
+.table.is-fixed {
+    table-layout: fixed;
+
+    thead,
+    tbody tr {
+        display: table;
+        width: 100%;
+    }
+
+    tbody {
+        display: block;
+        overflow: auto;
+        height: 100%;
+    }
+}
+
+.table-container {
+    
+    .table-header {
+        padding-right: 17px;
+        border-bottom: 1px solid $base-border-color;
+        background-color: $light;
+
+        thead > tr:last-child th,
+        thead > tr:last-child td {
+            border-bottom: 0;
+        }
+    }
+
+    .table-body {
+        overflow: auto;
+    }
+}
+
+.table-multi {
+    position: relative;
+    border: 1px solid #dcdee3;
+
+    table {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .table-header {
+        background: #ebecf0;
+        overflow: auto;
+
+        .table-header-inner {
+            overflow: hidden;
+        }
+    }
+
+    .table-body {
+        overflow-x: auto;
+        overflow-y: visible;
+    }
+
+    .table-left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        border: 0;
+    }
+
+    .table-right {
+        position: absolute;
+        right: 17px;
+        top: 0;
+        z-index: 1;
+        border: 0;
+    }
+}

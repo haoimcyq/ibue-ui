@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+.control {
+    display: block;
+    width: 100%;
+    height: 36px;
+    line-height: 34px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid $base-border-color;
+    background-color: transparent;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus {
+        //
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .control.is-#{$color} {
+        border-color: $value;
+    }
+}
+
+@each $size, $value in $components-size {
+    .control.is-#{$size} {
+        height: $value;
+        line-height: $value - 2;
+    }
+}
+
+.form {
+    //
+    &.is-inline {
+        display: flex;
+
+        .form-field:not(:first-child) {
+            margin-left: 16px;
+        }
+    }
+
+    &.is-horizontal {
+
+        .form-field {
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 16px;
+
+            .help {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        display: block;
+        line-height: 1.5;
+        padding: 8px 0;
+    }
+}

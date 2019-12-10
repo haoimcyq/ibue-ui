@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.breadcrumb {
+
+    > li {
+        display: inline-block;
+
+        a {
+            color: #8a8a8a;
+        }
+
+        + li:before {
+            padding: 0 8px;
+            color: #ccc;
+            content: "/";
+        }
+    }
+
+    &.is-arrow {
+        > li + li:before {
+            content: ">";
+        }
+    }
+
+    .active {
+        color: #999999;
+    }
+}

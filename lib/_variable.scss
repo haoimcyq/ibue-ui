@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+$base-unit: 8px;
+$base-border-color: rgba(0, 0, 0, .12);
+
+// 字体
+$base-font-size: 14 !default;
+$global-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+// 主题颜色
+$primary:       #0788f5 !default;
+$secondary:     #5678a8 !default;
+$success:       #7dc419 !default;
+$info:          #04aac1 !default;
+$warning:       #fbac01 !default;
+$error:         #f85d60 !default;
+$light:         #f1f3f5 !default;
+$dark:          #282f34 !default;
+
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "error":      $error,
+    "dark":       $dark,
+    "light":      $light
+) !default;
+
+// 网格
+$gutter: $base-unit * 3;
+$columns: 24;
+
+$grid-breakpoints: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$components-size: (
+  mini: 24px,
+  small: 32px,
+  medium: 40px,
+  large: 48px
+) !default;

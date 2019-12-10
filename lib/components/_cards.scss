@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+.card {
+    border: 1px solid $base-border-color;
+
+    .card-image {
+        //
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    .card-header {
+        padding: $base-unit * 2 $base-unit * 3;
+        font-weight: 500;
+        font-size: 16px;
+        border-bottom: 1px solid $base-border-color;
+    }
+
+    .card-body {
+        padding: $base-unit * 3;
+    }
+
+    .card-title {
+        line-height: 1.2;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: $base-unit * 2;
+    }
+
+    .card-text {
+        
+    }
+
+    .card-footer {
+        padding: $base-unit * 2 $base-unit * 3;
+        border-top: 1px solid $base-border-color;
+    }
+
+    .card-actions {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: $base-unit $base-unit * 3;
+        border-top: 1px solid $base-border-color;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .card.is-#{$color},
+    .card .card-header.is-#{$color},
+    .card .card-footer.is-#{$color} {
+        @if ($color == light) {
+            color: $dark;
+        }
+        @else {
+            color: #ffffff;
+        }
+        background-color: $value;
+    }
+}
+
+.card.is-shadow {
+    box-shadow: 0 2px 14px 0 $base-border-color;
+}
+
+.card.is-hovered {
+
+    &:hover {
+        box-shadow: 0 2px 14px 0 $base-border-color;
+    }
+}
+
+.card.is-horizontal {
+    display: flex;
+}
+
+.card-group {
+    display: flex;
+
+    > .card {
+        flex: 1 0 0%;
+
+        &:not(:first-child):not(:hover) {
+            border-left: 0;
+        }
+    }
+}

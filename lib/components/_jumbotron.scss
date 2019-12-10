@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.list {
+    display: flex;
+    flex-direction: column;
+
+    .item {
+        //
+    }
+
+    &.is-horizontal {
+        flex-direction: row;
+    }
+}

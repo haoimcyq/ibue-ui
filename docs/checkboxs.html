@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./js/prism/prism.css">
+    <link rel="stylesheet" href="./../lib/ibue.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+        <aside id="sidebar" class="col-sm-8 col-md-6 col-lg-6 col-xl-4">
+            <div id="nav"></div>
+        </aside>
+        <main class="col-sm-16 col-md-18 col-lg-18 col-xl-20">
+            <header class="module-header bg-secondary">
+                <h1>多选框 <small>CHECKBOX</small></h1>
+            </header>
+            <section class="main-content">
+                <h3>基础多选框</h3>
+                <div class="description"></div>
+                <h5>示例代码：</h5>
+<!-- begin -->
+<pre class="line-numbers"><code class="language-markup">&lt;label class="checkbox is-primary" for="primary">
+    &lt;input id="primary" type="checkbox" name="primary" checked>
+    &lt;i class="checkbox-icon">&lt;/i> primary
+&lt;/label>
+</code></pre>
+<!-- end -->
+                <h5>演示效果：</h5>
+                <div class="example table-responsive">
+                        <table class="table is-bordered is-centered">
+                            <tbody>
+                                <tr>
+                                    <td>颜色类</td>
+                                    <td class="text-error">.is-primary</td>
+                                    <td class="text-error">.is-secondary</td>
+                                    <td class="text-error">.is-success</td>
+                                    <td class="text-error">.is-error</td>
+                                    <td class="text-error">.is-warning</td>
+                                    <td class="text-error">.is-info</td>
+                                    <td class="text-error">.is-dark</td>
+                                    <td class="text-error">.is-light</td>
+                                </tr>
+                                <tr>
+                                    <td>含义</td>
+                                    <td>主要</td>
+                                    <td>次要</td>
+                                    <td>成功</td>
+                                    <td>失败</td>
+                                    <td>提醒</td>
+                                    <td>信息</td>
+                                    <td>暗色</td>
+                                    <td>亮色</td>
+                                </tr>
+                                <tr>
+                                    <td>效果</td>
+                                    <td>
+                                        <label class="checkbox is-primary" for="primary">
+                                            <input id="primary" type="checkbox" name="primary" checked>
+                                            <i class="checkbox-icon"></i> primary
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-secondary" for="secondary">
+                                            <input id="secondary" type="checkbox" name="secondary" checked>
+                                            <i class="checkbox-icon"></i> secondary
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-success" for="success">
+                                            <input id="success" type="checkbox" name="success" checked>
+                                            <i class="checkbox-icon"></i> success
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-error" for="error">
+                                            <input id="error" type="checkbox" name="error" checked>
+                                            <i class="checkbox-icon"></i> error
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-warning" for="warning">
+                                            <input id="warning" type="checkbox" name="warning" checked>
+                                            <i class="checkbox-icon"></i> warning
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-info" for="info">
+                                            <input id="info" type="checkbox" name="info" checked>
+                                            <i class="checkbox-icon"></i> info
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-dark" for="dark">
+                                            <input id="dark" type="checkbox" name="dark" checked>
+                                            <i class="checkbox-icon"></i> dark
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-light" for="light">
+                                            <input id="light" type="checkbox" name="light" checked>
+                                            <i class="checkbox-icon"></i> light
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                <h3>禁用状态多选框</h3>
+                <div class="description">
+                    <p>给多选框类<span class="text-error">checkbox</span>的input类型为checkbox的元素或标签设置属性disabled。</p>
+                </div>
+                <h5>示例代码：</h5>
+<!-- begin -->
+<pre class="line-numbers"><code class="language-markup">&lt;label class="checkbox is-primary" for="primary">
+    &lt;input id="primary" type="checkbox" name="primary" checked disabled>
+    &lt;i class="checkbox-icon">&lt;/i> primary
+&lt;/label>
+</code></pre>
+<!-- end -->
+<h5>演示效果：</h5>
+                    <div class="example table-responsive">
+                        <table class="table is-bordered is-centered">
+                            <tbody>
+                                <tr>
+                                    <td>颜色类</td>
+                                    <td class="text-error">.is-primary</td>
+                                    <td class="text-error">.is-secondary</td>
+                                    <td class="text-error">.is-success</td>
+                                    <td class="text-error">.is-error</td>
+                                    <td class="text-error">.is-warning</td>
+                                    <td class="text-error">.is-info</td>
+                                    <td class="text-error">.is-dark</td>
+                                    <td class="text-error">.is-light</td>
+                                </tr>
+                                <tr>
+                                    <td>含义</td>
+                                    <td>主要</td>
+                                    <td>次要</td>
+                                    <td>成功</td>
+                                    <td>失败</td>
+                                    <td>提醒</td>
+                                    <td>信息</td>
+                                    <td>暗色</td>
+                                    <td>亮色</td>
+                                </tr>
+                                <tr>
+                                    <td>效果</td>
+                                    <td>
+                                        <label class="checkbox is-primary" for="primary2">
+                                            <input id="primary2" type="checkbox" name="primary2" checked disabled>
+                                            <i class="checkbox-icon"></i> primary
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-secondary" for="secondary2">
+                                            <input id="secondary2" type="checkbox" name="secondary2" disabled>
+                                            <i class="checkbox-icon"></i> secondary
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-success" for="success2">
+                                            <input id="success2" type="checkbox" name="success2" checked disabled>
+                                            <i class="checkbox-icon"></i> success
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-error" for="error2">
+                                            <input id="error2" type="checkbox" name="error2" checked disabled>
+                                            <i class="checkbox-icon"></i> error
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-warning" for="warning2">
+                                            <input id="warning2" type="checkbox" name="warning2" checked disabled>
+                                            <i class="checkbox-icon"></i> warning
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-info" for="info2">
+                                            <input id="info2" type="checkbox" name="info2" disabled>
+                                            <i class="checkbox-icon"></i> info
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-dark" for="dark2">
+                                            <input id="dark2" type="checkbox" name="dark2" disabled>
+                                            <i class="checkbox-icon"></i> dark
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="checkbox is-light" for="light2">
+                                            <input id="light2" type="checkbox" name="light2" disabled>
+                                            <i class="checkbox-icon"></i> light
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                <h3>CSS 类名列表</h3>
+                <div class="example">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>类名</th>
+                                <th>效果</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-error">.checkbox</td>
+                                <td>定义一个多选框组件。</td>
+                            </tr>
+                            <tr>
+                                <td class="text-error">.is-primary</td>
+                                <td>预定义组件样式。</td>
+                            </tr>
+                            <tr>
+                                <td class="text-error">.is-secondary</td>
+                                <td>预定义组件样式。</td>
+                            </tr>
+                            <tr>
+                                <td class="text-error">.is-success</td>
+                                <td>预定义组件样式。</td>
+                            </tr>
+                            <tr>
+                                <td class="text-error">.is-error</td>
+                                <td>预定义组件样式。</td>
+                            </tr>
+                            <tr>
+                                <td class="text-error">.is-warning</td>
+                                <td>预定义组件样式。</td>
+                            </tr>
+                            <tr>
+                                <td class="text-error">.is-info</td>
+                                <td>预定义组件样式。</td>
+                            </tr>
+                            <tr>
+                                <td class="text-error">.is-dark</td>
+                                <td>预定义组件样式。</td>
+                            </tr>
+                            <tr>
+                                <td class="text-error">.is-light</td>
+                                <td>预定义组件样式。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        </div>
+    </div>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/prism/prism.js"></script>
+</body>
+</html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./js/prism/prism.css">
+    <link rel="stylesheet" href="./../lib/ibue.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        .table.is-fixed thead th,
+        .table.is-fixed tbody td {
+            width: 50px;
+        }
+
+        .table.is-fixed thead {
+            width: calc(100% - 8px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <aside id="sidebar" class="col-sm-8 col-md-6 col-lg-6 col-xl-4">
+                <div id="nav"></div>
+            </aside>
+            <main class="col-sm-16 col-md-18 col-lg-18 col-xl-20">
+                <header class="module-header bg-error">
+                    <h1>表格 <small>TABLE</small></h1>
+                </header>
+                <section class="main-content">
+                <h3>默认表格</h3>
+                <div class="description">
+                    <p>给表格添加 <span class="text-error">.table</span> 类生成表格样式。</p>
+                </div>
+                <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;table class="table">&lt;/table>
+</code></pre>
+                <div class="example">
+                    <h5>演示效果：</h5>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th width="50">
+                                    <label class="checkbox is-primary" for="primary">
+                                        <input id="primary" type="checkbox" name="primary">
+                                        <i class="checkbox-icon"></i>
+                                    </label>
+                                </th>
+                                <th>组件</th>
+                                <th>名称</th>
+                                <th>日期</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label class="checkbox is-primary" for="primary1">
+                                        <input id="primary1" type="checkbox" name="primary">
+                                        <i class="checkbox-icon"></i>
+                                    </label>
+                                </td>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                                <td>
+                                    <button class="button is-primary is-small">查看</button>
+                                    <button class="button is-error is-small">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="checkbox is-primary" for="primary2">
+                                        <input id="primary2" type="checkbox" name="primary" checked disabled>
+                                        <i class="checkbox-icon"></i>
+                                    </label>
+                                </td>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                                <td>
+                                    <button class="button is-primary is-small">查看</button>
+                                    <button class="button is-error is-small">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="checkbox is-primary" for="primary3">
+                                        <input id="primary3" type="checkbox" name="primary">
+                                        <i class="checkbox-icon"></i>
+                                    </label>
+                                </td>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                                <td>
+                                    <button class="button is-primary is-small">查看</button>
+                                    <button class="button is-error is-small">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="checkbox is-primary" for="primary4">
+                                        <input id="primary4" type="checkbox" name="primary" checked>
+                                        <i class="checkbox-icon"></i>
+                                    </label>
+                                </td>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                                <td>
+                                    <button class="button is-primary is-small">查看</button>
+                                    <button class="button is-error is-small">删除</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>带边框的表格</h3>
+                <div class="description">
+                    <p>给表格类<span class="text-error">table</span>添加<span class="text-error">is-bordered</span>为表格和其中的每个单元格增加边框。</p>
+                </div>
+                <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;table class="table is-bordered">&lt;/table>
+</code></pre>
+                <div class="example">
+                    <h5>演示效果：</h5>
+                    <table class="table is-bordered">
+                        <thead>
+                            <tr>
+                                <th>组件</th>
+                                <th>名称</th>
+                                <th>日期</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>条纹状表格</h3>
+                <div class="description">
+                    <p>给表格类<span class="text-error">table</span>添加<span class="text-error">is-striped</span>增加斑马条纹样式。</p>
+                </div>
+                <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;table class="table is-striped">&lt;/table>
+</code></pre>
+                <div class="example">
+                    <h5>演示效果：</h5>
+                    <table class="table is-striped">
+                        <thead>
+                            <tr>
+                                <th>组件</th>
+                                <th>名称</th>
+                                <th>日期</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>鼠标悬停</h3>
+                <div class="description">
+                    <p>给表格类<span class="text-error">table</span>添加<span class="text-error">is-hovered</span>每一行对鼠标悬停状态作出响应。</p>
+                </div>
+                <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;table class="table is-hovered">&lt;/table>
+</code></pre>
+                <div class="example">
+                    <h5>演示效果：</h5>
+                    <table class="table is-hovered">
+                        <thead>
+                            <tr>
+                                <th>组件</th>
+                                <th>名称</th>
+                                <th>日期</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>紧缩表格</h3>
+                <div class="description">
+                    <p>给表格类<span class="text-error">table</span>添加<span class="text-error">is-condensed</span>让表格更加紧凑。</p>
+                </div>
+                <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;table class="table is-condensed">&lt;/table>
+</code></pre>
+                <div class="example">
+                    <h5>演示效果：</h5>
+                    <table class="table is-condensed">
+                        <thead>
+                            <tr>
+                                <th>组件</th>
+                                <th>名称</th>
+                                <th>日期</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>响应式表格</h3>
+                <div class="description">
+                    <p>将任何表格类 <span class="text-error">table</span> 元素包裹在 <span class="text-error">.table-responsive</span> 元素内，即可创建响应式表格。</p>
+                </div>
+                <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="table-responsive">
+    &lt;table class="table">&lt;/table>
+&lt;/div>
+</code></pre>
+                <div class="example">
+                    <h5>演示效果：</h5>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                    <tr>
+                                        <th>电影名称</th>
+                                        <th>当日排片</th>
+                                        <th>当日人次</th>
+                                        <th>当日预售票房</th>
+                                        <th>实时累积票房</th>
+                                    </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd"><td>少年的你</td><td>10.78万</td><td>43.26万</td><td>1225.52万</td><td>8亿</td> </tr>
+                                <tr class="even"><td>催眠·裁决</td><td>2.65万</td><td>3.58万</td><td>105.3万</td><td>7238万</td> </tr>
+                                <tr class="odd"><td>沉睡魔咒2</td><td>2.53万</td><td>7.16万</td><td>168.26万</td><td>3.13亿</td> </tr>
+                                <tr class="even"><td>中国机长</td><td>2.34万</td><td>6.07万</td><td>163.05万</td><td>27.9亿</td> </tr>
+                                <tr class="odd"><td>航海王：狂热行动</td><td>1.13万</td><td>1.5万</td><td>40.65万</td><td>1.96亿</td> </tr>
+                                <tr class="even"><td>我和我的祖国</td><td>9110</td><td>11.84万</td><td>413.59万</td><td>28.26亿</td> </tr>
+                                <tr class="odd"><td>双子杀手</td><td>8686</td><td>2.47万</td><td>78.62万</td><td>2.23亿</td> </tr>
+                                <tr class="even"><td>攀登者</td><td>4859</td><td>1.92万</td><td>59.25万</td><td>10.6亿</td> </tr>
+                                <tr class="odd"><td>天作谜案</td><td>4719</td><td>6152</td><td>15.16万</td><td>862.75万</td> </tr>
+                                <tr class="even"><td>犯罪现场</td><td>4547</td><td>6139</td><td>14.9万</td><td>2.49亿</td> </tr>
+                                <tr class="odd"><td>道具师</td><td>3814</td><td>1.03万</td><td>20.12万</td><td>21.9万</td> </tr>
+                                <tr class="even"><td>终结者：黑暗命运</td><td>2804</td><td>2.73万</td><td>94.86万</td><td>100.6万</td> </tr>
+                                <tr class="odd"><td colspan="5" class="right"><span class="form_description">票房仅供参考。更新时间：2019/10/31 11:31:01</span></td> </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <h3>状态类</h3>
+                <div class="description">
+                    <p>可以为行或单元格设置颜色。</p>
+                </div>
+                <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;table class="table">
+    ...
+    &lt;tbody>
+        &lt;tr class="is-primary">&lt;/tr>
+        ...
+    &lt;/tbody>
+&lt;/table>
+</code></pre>
+                <div class="example">
+                    <h5>演示效果：</h5>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>组件</th>
+                                <th>名称</th>
+                                <th>日期</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="is-primary">
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr class="is-success">
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr class="is-error">
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr>
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                            <tr class="is-warning">
+                                <td>Grid</td>
+                                <td>网格系统</td>
+                                <td>2019/10/23</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>表头固定</h3>
+                <div class="description">
+                    <p>表格列的宽度由表格宽度决定，不由内容决定，并且需要设置tbody的高度，需要动态计算滚动条的宽度防止错位。</p>
+                </div>
+                <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-js">/** 动态计算滚动条的宽度 */
+function getScrollbarWidth() {
+    var scroller = document.createElement("div"), body = document.body, scrollWidth = 0;
+
+    scroller.style.cssText = "width: 100px; height: 100px; overflow: scroll; visibility: hidden;";
+    body.appendChild(scroller);
+    scrollWidth = scroller.offsetWidth - scroller.clientWidth;
+    body.removeChild(scroller);
+
+    return scrollWidth
+}
+</code></pre>
+                <h5>示例代码：</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="table-container">
+    &lt;div class="table-header">
+        &lt;table class="table">
+            &lt;colgroup>
+                &lt;col style="width: 200px;">
+                ...
+            &lt;/colgroup>
+            &lt;thead>&lt;/thead>
+        &lt;/table>
+    &lt;/div>
+    &lt;div class="table-body" style="max-height: 248px;">
+        &lt;table class="table">
+            &lt;colgroup>
+                &lt;col style="width: 200px;">
+                ...
+            &lt;/colgroup>
+            &lt;tbody>&lt;/tbody>
+        &lt;/table>
+    &lt;/div>
+&lt;/div>
+</code></pre>
+                <div class="example">
+                    <h5>演示效果：</h5>
+                    <div class="table-container">
+                        <div class="table-header calculate-scrollbar">
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 200px;">
+                                    <col style="width: 200px;">
+                                    <col style="width: 200px;">
+                                    <col style="width: 200px;">
+                                    <col style="width: 200px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>电影名称</th>
+                                        <th>当日排片</th>
+                                        <th>当日人次</th>
+                                        <th>当日预售票房</th>
+                                        <th>实时累积票房</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="table-body" style="max-height: 248px;">
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 200px;">
+                                    <col style="width: 200px;">
+                                    <col style="width: 200px;">
+                                    <col style="width: 200px;">
+                                    <col style="width: 200px;">
+                                </colgroup>
+                                <tbody>
+                                    <tr class="odd"><td>少年的你</td><td>10.78万</td><td>43.26万</td><td>1225.52万</td><td>8亿</td> </tr>
+                                    <tr class="even"><td>催眠·裁决</td><td>2.65万</td><td>3.58万</td><td>105.3万</td><td>7238万</td> </tr>
+                                    <tr class="odd"><td>沉睡魔咒2</td><td>2.53万</td><td>7.16万</td><td>168.26万</td><td>3.13亿</td> </tr>
+                                    <tr class="even"><td>中国机长</td><td>2.34万</td><td>6.07万</td><td>163.05万</td><td>27.9亿</td> </tr>
+                                    <tr class="odd"><td>航海王：狂热行动</td><td>1.13万</td><td>1.5万</td><td>40.65万</td><td>1.96亿</td> </tr>
+                                    <tr class="even"><td>我和我的祖国</td><td>9110</td><td>11.84万</td><td>413.59万</td><td>28.26亿</td> </tr>
+                                    <tr class="odd"><td>双子杀手</td><td>8686</td><td>2.47万</td><td>78.62万</td><td>2.23亿</td> </tr>
+                                    <tr class="even"><td>攀登者</td><td>4859</td><td>1.92万</td><td>59.25万</td><td>10.6亿</td> </tr>
+                                    <tr class="odd"><td>天作谜案</td><td>4719</td><td>6152</td><td>15.16万</td><td>862.75万</td> </tr>
+                                    <tr class="even"><td>犯罪现场</td><td>4547</td><td>6139</td><td>14.9万</td><td>2.49亿</td> </tr>
+                                    <tr class="odd"><td>道具师</td><td>3814</td><td>1.03万</td><td>20.12万</td><td>21.9万</td> </tr>
+                                    <tr class="even"><td>终结者：黑暗命运</td><td>2804</td><td>2.73万</td><td>94.86万</td><td>100.6万</td> </tr>
+                                    <tr class="odd"><td colspan="5" class="right"><span class="form_description">票房仅供参考。更新时间：2019/10/31 11:31:01</span></td> </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <section>
+                    <h3>CSS 类名列表</h3>
+                    <div class="example">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>类名</th>
+                                    <th>效果</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-error">.table</td>
+                                    <td>定义一个表格组件。</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-error">.is-bordered</td>
+                                    <td>定义一个表格组件边框。</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-error">.is-striped</td>
+                                    <td>定义表格组件斑马线效果。</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-error">.is-hovered</td>
+                                    <td>定义表格组件鼠标悬停效果。</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-error">.is-condensed</td>
+                                    <td>定义紧凑型表格组件。</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-error">.table-responsive</td>
+                                    <td>定义响应式表格容器。</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-error">.is-primary</td>
+                                    <td>预定义组件样式。</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-error">.is-secondary</td>
+                                    <td>预定义组件样式。</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-error">.is-success</td>
+                                    <td>预定义组件样式。</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-error">.is-error</td>
+                                    <td>预定义组件样式。</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-error">.is-warning</td>
+                                    <td>预定义组件样式。</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-error">.is-info</td>
+                                    <td>预定义组件样式。</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-error">.is-dark</td>
+                                    <td>预定义组件样式。</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-error">.is-light</td>
+                                    <td>预定义组件样式。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+            </main>
+        </div>
+    </div>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/prism/prism.js"></script>
+    <script>
+        $(function() {
+            function getScrollbarWidth() {
+                var scroller = document.createElement("div"), body = document.body, scrollWidth = 0;
+
+                scroller.style.cssText = "width: 100px; height: 100px; overflow: scroll; visibility: hidden;";
+                body.appendChild(scroller);
+                scrollWidth = scroller.offsetWidth - scroller.clientWidth;
+                body.removeChild(scroller);
+
+                return scrollWidth
+            }
+
+            $('.calculate-scrollbar').css('padding-right', getScrollbarWidth())
+
+            
+        })
+    </script>
+</body>
+</html>

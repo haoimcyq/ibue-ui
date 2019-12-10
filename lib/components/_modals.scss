@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.12);
+    z-index: 999;
+    overflow: auto;
+    display: none;
+
+    .modal-inner {
+        //
+    }
+
+    .modal-content {
+        border: 1px solid $base-border-color;
+        background-color: #ffffff;
+        @include border-radius(4px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        margin: 40px auto;
+    }
+
+    .modal-header {
+        position: relative;
+        padding: $base-unit * 2 $base-unit * 3;
+        border-bottom: 1px solid $base-border-color;
+
+        .close {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: $base-unit;
+            width: 40px;
+            height: 40px;
+            font-size: 28px;
+            line-height: 40px;
+            text-align: center;
+            margin-top: -20px;
+            opacity: 0.75;
+        }
+    }
+
+    .modal-body {
+        padding: $base-unit * 3;
+    }
+
+    .modal-footer {
+        padding: 10px $base-unit * 3;
+        border-top: 1px solid $base-border-color;
+    }
+}
